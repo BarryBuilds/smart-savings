@@ -2,6 +2,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+from pathlib import Path
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -40,10 +41,14 @@ div[data-testid="stMetric"] {
 
 # ---------------- LOAD MODELS ----------------
 @st.cache_resource
+# ---------------- LOAD MODELS ----------------
+BASE_DIR = Path(__file__).resolve().parent
+
+@st.cache_resource
 def load_models():
-    savings = joblib.load("savings_model.joblib")
-    saver = joblib.load("saver_model.joblib")
-    customers = pd.read_csv("customers_with_groups.csv")
+    savings = joblib.load(BASE_DIR / "savings_model.joblib")
+    saver = joblib.load(BASE_DIR / "saver_model.joblib")
+    customers = pd.read_csv(BASE_DIR / "customers_with_groups.csv")
     return savings, saver, customers
 
 try:
