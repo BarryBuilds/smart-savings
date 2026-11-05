@@ -18,7 +18,27 @@ st.markdown("""
     background-color: #f4f7fb;
     color: #263445;
 }
+/* Improve text visibility */
+.stApp {
+    color: #17365d;
+}
 
+.stApp p,
+.stApp label,
+.stApp span,
+.stApp h1,
+.stApp h2,
+.stApp h3 {
+    color: #17365d;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: #17365d !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #2874a6 !important;
+}
 h1, h2, h3, p, label,
 .stMarkdown, .stCaption {
     color: #263445;
