@@ -38,9 +38,7 @@ div[data-testid="stMetric"] {
 </style>
 """, unsafe_allow_html=True)
 
-# ---------------- LOAD MODELS ----------------
-@st.cache_resource
-# ---------------- LOAD MODELS ----------------
+
 BASE_DIR = Path(__file__).resolve().parent
 
 @st.cache_resource
