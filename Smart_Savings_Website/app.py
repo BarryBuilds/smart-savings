@@ -12,13 +12,18 @@ st.set_page_config(
 
 # ---------------- CUSTOM DESIGN ----------------
 st.markdown("""
+
 <style>
 .stApp {
     background-color: #f4f7fb;
+    color: #263445;
 }
-h1, h2, h3 {
-    color: #17365d;
+
+h1, h2, h3, p, label,
+.stMarkdown, .stCaption {
+    color: #263445;
 }
+
 .hero {
     background: linear-gradient(120deg, #17365d, #2874a6);
     padding: 30px;
@@ -26,17 +31,40 @@ h1, h2, h3 {
     color: white;
     margin-bottom: 25px;
 }
-.hero h1 {
-    color: white;
+
+.hero h1, .hero p {
+    color: white !important;
 }
+
 div[data-testid="stMetric"] {
     background: white;
     padding: 20px;
     border-radius: 12px;
     border: 1px solid #e1e8f0;
 }
+
+div[data-testid="stMetric"] label,
+div[data-testid="stMetric"] [data-testid="stMetricValue"] {
+    color: #17365d !important;
+}
+
+.stTabs [data-baseweb="tab"] {
+    color: #17365d !important;
+}
+
+.stTabs [aria-selected="true"] {
+    color: #2874a6 !important;
+}
+
+.stButton button,
+.stFormSubmitButton button {
+    color: white;
+    background-color: #17365d;
+    border: none;
+}
+
 </style>
-""", unsafe_allow_html=True)
+
 
 
 BASE_DIR = Path(__file__).resolve().parent
